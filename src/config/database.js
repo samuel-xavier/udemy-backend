@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017/todo';
-mongoose.connect(url, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
 
 module.exports = mongoose;
